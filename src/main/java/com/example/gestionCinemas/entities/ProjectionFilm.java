@@ -12,6 +12,7 @@ public class ProjectionFilm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dateProjection;
     private double prix;
 

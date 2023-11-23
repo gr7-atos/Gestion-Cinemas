@@ -18,6 +18,7 @@ public class Film {
     private String realisateur;
     private String description;
     private String photo;
+    @Temporal(TemporalType.DATE)
     private Date dateSortie;
 
     @OneToMany(mappedBy = "film")
