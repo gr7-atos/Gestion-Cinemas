@@ -19,4 +19,7 @@ public class Salle {
 
     @OneToMany(mappedBy = "salle", fetch = FetchType.EAGER)
     private Collection<Place> places;
+
+    @OneToMany(mappedBy = "salle")
+    private Collection<ProjectionFilm> projectionFilms;
 }

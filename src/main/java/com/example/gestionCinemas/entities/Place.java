@@ -3,6 +3,8 @@ package com.example.gestionCinemas.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Collection;
+
 @Entity
 @Data
 public class Place {
@@ -16,4 +18,7 @@ public class Place {
 
     @ManyToOne
     private Salle salle;
+
+    @OneToMany(mappedBy = "place")
+    private Collection<Ticket> tickets;
 }

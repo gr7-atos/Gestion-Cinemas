@@ -4,6 +4,7 @@ package com.example.gestionCinemas.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -18,4 +19,10 @@ public class Film {
     private String description;
     private String photo;
     private Date dateSortie;
+
+    @OneToMany(mappedBy = "film")
+    private Collection<ProjectionFilm> projectionFilms;
+
+    @ManyToOne
+    private Categorie categorie;
 }

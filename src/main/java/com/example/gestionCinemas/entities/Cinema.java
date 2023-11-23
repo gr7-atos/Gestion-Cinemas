@@ -23,3 +23,6 @@ public class Cinema {
     @OneToMany(mappedBy = "cinema", fetch=FetchType.EAGER)
     private Collection<Salle> salles;
 }
+
+
+//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

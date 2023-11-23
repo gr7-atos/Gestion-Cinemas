@@ -13,4 +13,10 @@ public class Ticket {
     private double prix;
     private int codePayement;
     private boolean reservee;
+
+    @ManyToOne
+    private Place place;
+
+    @ManyToOne
+    private ProjectionFilm projectionFilm;
 }
