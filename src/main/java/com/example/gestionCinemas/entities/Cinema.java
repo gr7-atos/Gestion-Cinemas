@@ -1,12 +1,18 @@
 package com.example.gestionCinemas.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cinema {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +27,8 @@ public class Cinema {
     private Ville ville;
 
     @OneToMany(mappedBy = "cinema", fetch=FetchType.EAGER)
-    private Collection<Salle> salles;
+    private Collection<Salle> salles = new ArrayList<>() {
+    };
 }
 
 
